@@ -38,6 +38,9 @@ function malPo(klucz) {
         return P[klucz]-L[klucz];
     }
 }
+function compareWords(L, P) {
+	return L - P;
+ }
 
 var tabP = [
 	new państwo("Rosja","Europa",17000000,150000000),
@@ -55,5 +58,4 @@ function generujTab(sposóbSort) {
     }
     tabela.innerHTML = html;
 }
-onclick 
-generujTab(rosnPo("powierzchnia"));
+generujTab(rosnPo("gęstość"));
