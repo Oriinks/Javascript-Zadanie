@@ -60,3 +60,7 @@ function generujTab(sposóbSort) {
     tabela.innerHTML = html;
 }
 generujTab(rosnPo("gęstość"));
+
+
+
+//test dopisany do synchronizacji
