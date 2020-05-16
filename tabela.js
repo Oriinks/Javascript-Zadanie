@@ -15,6 +15,7 @@ class państwo{
 		return P.gęstość()-L.gęstość();
 	}
 	dajWierszHTML() {
+		//test komentarz
 		let html = "<tr>";
 		for(let klucz in this) {
 			html += "<td>";
