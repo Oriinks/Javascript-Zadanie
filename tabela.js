@@ -64,3 +64,4 @@ function generujTab(sposóbSort) {
     }
     tabela.innerHTML = html;
 }
+generujTab(rosnPoAlf("kraj"));
