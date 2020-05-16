@@ -1,6 +1,6 @@
 class państwo{
-	constructor(nazwa,kontynent,powierzchnia,populacja,){
-		this.nazwa = nazwa;
+	constructor(kraj,kontynent,powierzchnia,populacja,){
+		this.kraj = kraj;
 		this.kontynent = kontynent;
 		this.powierzchnia = powierzchnia;
 		this.populacja = populacja;
@@ -28,6 +28,16 @@ class państwo{
 		return html;
 	}
 }
+function rosnPoAlf(klucz) {
+	return function (L, P) {
+		return L[klucz].localeCompare(P[klucz]);
+	}
+}
+function malPoAlf(indeks) {
+	return function (L, P) {
+		return P[indeks].localeCompare(L[indeks]);
+	}
+}
 function rosnPo(klucz) {
     return function (L,P) {
         return L[klucz]-P[klucz];
@@ -38,10 +48,6 @@ function malPo(klucz) {
         return P[klucz]-L[klucz];
     }
 }
-function compareWords(L, P) {
-	return L - P;
- }
-
 var tabP = [
 	new państwo("Rosja","Europa",17000000,150000000),
 	new państwo("Indie","Azja",3300000,1300000000),
