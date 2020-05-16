@@ -15,7 +15,6 @@ class państwo{
 		return P.gęstość()-L.gęstość();
 	}
 	dajWierszHTML() {
-		//test komentarz
 		let html = "<tr>";
 		for(let klucz in this) {
 			html += "<td>";
@@ -60,9 +59,3 @@ function generujTab(sposóbSort) {
     tabela.innerHTML = html;
 }
 generujTab(rosnPo("gęstość"));
-
-
-
-//test dopisany do synchronizacji
-
-//kolejny test po update
