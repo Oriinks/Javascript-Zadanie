@@ -1,6 +1,6 @@
 class państwo{
-	constructor(kraj,kontynent,powierzchnia,populacja,){
-		this.kraj = kraj;
+	constructor(nazwa,kontynent,powierzchnia,populacja,){
+		this.nazwa = nazwa;
 		this.kontynent = kontynent;
 		this.powierzchnia = powierzchnia;
 		this.populacja = populacja;
@@ -12,7 +12,7 @@ class państwo{
 		return L.gęstość()-P.gęstość();
 	}
 	static malGęst(L,P) {
-		return P.gęstość() - L.gęstość();
+		return P.gęstość()-L.gęstość();
 	}
 	dajWierszHTML() {
 		let html = "<tr>";
@@ -38,9 +38,8 @@ function malPo(klucz) {
         return P[klucz]-L[klucz];
     }
 }
-function compareWords(klucz)
-	return function (L, P) {
-		return sort(L, P);
+function compareWords(L, P) {
+	return L - P;
  }
 
 var tabP = [
