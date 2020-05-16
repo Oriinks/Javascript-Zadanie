@@ -64,3 +64,5 @@ generujTab(rosnPo("gęstość"));
 
 
 //test dopisany do synchronizacji
+
+//kolejny test po update
