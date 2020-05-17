@@ -74,15 +74,5 @@ function generujTab(sposóbSort) {
     }
     tabela.innerHTML = html;
 }
-
 generujTab(rosnPoAlf("kraj"));
-
-//var json = $.getJSON("dane.json");
-var json = require('data.json');
-
-var testi = 0
-function testuj() {
-	var html = "Hello World! " + testi + " <" + json;
-	test.innerHTML = html;
-	testi++;
-}
+//test
