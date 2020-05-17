@@ -78,11 +78,11 @@ generujTab(rosnPoAlf("kraj"));
 
 
 //var json = $.getJSON("dane.json");
-var json = require('data.json');
+var json = import('data.json');
 
 var testi = 0
 function testuj() {
-	var html = "Hello World! " + testi + " <" + json;
+	var html = "Hello World! " + testi + " <" + json.kraj[testi];
 	test.innerHTML = html;
 	testi++;
 }
