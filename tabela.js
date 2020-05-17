@@ -77,6 +77,7 @@ function testjson() {
 	sredniapow = sumapow / obj.length;
 	sredniapop = sumapop / obj.length;
 	sredniagestosc = sumagestosc / obj.length;
+	tabP.push(new Państwo("Średnia", "Wszystkie kontynenty", sredniapow.toFixed(2), sredniapop.toFixed(2), sredniagestosc.toFixed(2)));
 	
 }
 
@@ -88,7 +89,7 @@ function generujTab(sposóbSort) {
         html += wiersz.dajWierszHTML();
 	}
 	html += "<tr id='tytuly'><td>Suma</td><td>Wszystkie kontynenty</td><td>" + sumapow + "</td><td>" + sumapop + "</td><td>"+sumagestosc.toFixed(2)+"</td></tr>";
-	html += "<tr id='wartosci'><td>Średnia</td><td>Wszystkie kontynenty</td><td>" + sredniapow.toFixed(2) + "</td><td>" + sredniapop.toFixed(2) + "</td><td>" + sredniagestosc.toFixed(2) +"</td></tr>";
+	//html += "<tr id='wartosci'><td>Średnia</td><td>Wszystkie kontynenty</td><td>" + sredniapow.toFixed(2) + "</td><td>" + sredniapop.toFixed(2) + "</td><td>" + sredniagestosc.toFixed(2) +"</td></tr>";
 
     tabela.innerHTML = html;
 }
