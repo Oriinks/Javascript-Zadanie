@@ -54,16 +54,28 @@ var tabP = [];
 function testjson() {
 	//var text ='{"kraj": "Polska","kontynent": "Europa","powierzchnia": "38000000","populacja": "312000"}';
 	var text = '[{"kraj": "Polska","kontynent": "Europa","powierzchnia": "38000000","populacja": "312000"},{"kraj": "Rosja","kontynent": "Azja/Europa","powierzchnia": "83000000","populacja": "784000"},{"kraj": "Ukraina","kontynent": "Europa","powierzchnia": "37300000","populacja": "603000"},{"kraj": "Chiny","kontynent": "Azja","powierzchnia": "1420000000","populacja": "9563000"},{"kraj": "Indie","kontynent": "Azja","powierzchnia": "1296000000","populacja": "3288000"},{"kraj": "Turcja","kontynent": "Azja/Europa","powierzchnia": "83000000","populacja": "784000"},{"kraj": "Kazachstan","kontynent": "Azja/Europa","powierzchnia": "18000000","populacja": "2725000"},{"kraj": "Kanada","kontynent": "Ameryka Północna","powierzchnia": "124600000","populacja": "9985000"},{"kraj": "Meksyk","kontynent": "Ameryka Północna","powierzchnia": "18000000","populacja": "1973000"},{"kraj": "Brazylia","kontynent": "Ameryka Południowa","powierzchnia": "49300000","populacja": "1140000"},{"kraj": "Kolumbia","kontynent": "Ameryka Południowa","powierzchnia": "49300000","populacja": "1140000"},{"kraj": "Maroko","kontynent": "Afryka","powierzchnia": "34000000","populacja": "447000"},{"kraj": "Algieria","kontynent": "Afryka","powierzchnia": "41500000","populacja": "2382000"},{"kraj": "Australia","kontynent": "Australia i Oceania","powierzchnia": "25000000","populacja": "7687000"},{"kraj": "Nowa Zelandia","kontynent": "Australia i Oceania","powierzchnia": "4500000","populacja": "269000"}]';
-
+	var sumapow = 0;
+	var sredniapow = 0;
+	var sumapop = 0;
+	var sredniapop = 0;
+	var j = 0;
 	var obj = JSON.parse(text);
 	//test.innerHTML = obj[1].kraj;
 	//test.innerHTML = obj.length;
 
 	for (var i = 0; i < obj.length; i++) {
 		tabP.push(new Państwo(obj[i].kraj, obj[i].kontynent, obj[i].powierzchnia, obj[i].populacja));
+		sumapow += parseInt(obj[i].powierzchnia);
+		sumapop += parseInt(obj[i].populacja);
+		j++;
 	}
 	//test.innerHTML = tabP[0].kraj;
-
+	console.log(sumapow);
+	console.log(sumapop);
+	sredniapow = sumapow / j;
+	sredniapop = sumapop / j;
+	console.log(sredniapow);
+	console.log(sredniapop);
 }
 
 
