@@ -1,22 +1,22 @@
-class Państwo{
-	constructor(kraj,kontynent,powierzchnia,populacja,){
+class Państwo {
+	constructor(kraj, kontynent, powierzchnia, populacja, ) {
 		this.kraj = kraj;
 		this.kontynent = kontynent;
 		this.powierzchnia = powierzchnia;
 		this.populacja = populacja;
 	}
 	gęstość() {
-		return this.populacja/this.powierzchnia;
+		return this.populacja / this.powierzchnia;
 	}
-	static rosnGęst(L,P) {
-		return L.gęstość()-P.gęstość();
+	static rosnGęst(L, P) {
+		return L.gęstość() - P.gęstość();
 	}
-	static malGęst(L,P) {
-		return P.gęstość()-L.gęstość();
+	static malGęst(L, P) {
+		return P.gęstość() - L.gęstość();
 	}
 	dajWierszHTML() {
 		let html = "<tr>";
-		for(let klucz in this) {
+		for (let klucz in this) {
 			html += "<td>";
 			html += this[klucz];
 			html += "</td>";
@@ -28,6 +28,7 @@ class Państwo{
 		return html;
 	}
 }
+
 function rosnPoAlf(klucz) {
 	return function (L, P) {
 		return L[klucz].localeCompare(P[klucz]);
@@ -76,13 +77,17 @@ function generujTab(sposóbSort) {
 }
 generujTab(rosnPoAlf("kraj"));
 
-
-//var json = $.getJSON("dane.json");
-var json = require('data.json');
-
 var testi = 0
 function testuj() {
 	var html = "Hello World! " + testi + " <" + json;
 	test.innerHTML = html;
 	testi++;
 }
+function testjson() {
+	var text ='{"kraj": "Polska","kontynent": "Europa","powierzchnia": "38000000","populacja": "312000"}';
+//	'{"kraj": "Polska","kontynent": "Europa","powierzchnia": "38000000","populacja": "312000"},{"kraj": "Rosja","kontynent": "Azja/Europa","powierzchnia": "83000000","populacja": "784000"},{"kraj": "Ukraina","kontynent": "Europa","powierzchnia": "37300000","populacja": "603000"},{"kraj": "Chiny","kontynent": "Azja","powierzchnia": "1420000000","populacja": "9563000"},{"kraj": "Indie","kontynent": "Azja","powierzchnia": "1296000000","populacja": "3288000"},{"kraj": "Turcja","kontynent": "Azja/Europa","powierzchnia": "83000000","populacja": "784000"},{"kraj": "Kazachstan","kontynent": "Azja/Europa","powierzchnia": "18000000","populacja": "2725000"},{"kraj": "Kanada","kontynent": "Ameryka Północna","powierzchnia": "124600000","populacja": "9985000"},{"kraj": "Meksyk","kontynent": "Ameryka Północna","powierzchnia": "18000000","populacja": "1973000"},{"kraj": "Brazylia","kontynent": "Ameryka Południowa","powierzchnia": "49300000","populacja": "1140000"},{"kraj": "Kolumbia","kontynent": "Ameryka Południowa","powierzchnia": "49300000","populacja": "1140000"},{"kraj": "Maroko","kontynent": "Afryka","powierzchnia": "34000000","populacja": "447000"},{"kraj": "Algieria","kontynent": "Afryka","powierzchnia": "41500000","populacja": "2382000"},{"kraj": "Australia","kontynent": "Australia i Oceania","powierzchnia": "25000000","populacja": "7687000"},{"kraj": "Nowa Zelandia","kontynent": "Australia i Oceania","powierzchnia": "4500000","populacja": "269000"}';
+
+	var obj = JSON.parse(text);
+	test.innerHTML = obj.kraj;
+}
+testjson()
