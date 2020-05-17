@@ -77,12 +77,13 @@ function generujTab(sposóbSort) {
 
 generujTab(rosnPoAlf("kraj"));
 
-//var json = $.getJSON("dane.json");
-var json = require('data.json');
+var json = fetch("dane.json")
+	.then(response => response.json())
+	.then(json => console.log(json));
 
 var testi = 0
 function testuj() {
-	var html = "Hello World! " + testi + " <" + json;
+	var html = "Hello World! " + json + " <" + testi;
 	test.innerHTML = html;
 	testi++;
 }
