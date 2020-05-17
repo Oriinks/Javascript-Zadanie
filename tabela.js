@@ -75,17 +75,4 @@ function generujTab(sposóbSort) {
     tabela.innerHTML = html;
 }
 generujTab(rosnPoAlf("kraj"));
-<<<<<<< HEAD
 //test
-=======
-
-//var json = $.getJSON("dane.json");
-var json = require('data.json');
-
-var testi = 0
-function testuj() {
-	var html = "Hello World! " + testi + " <" + json;
-	test.innerHTML = html;
-	testi++;
-}
->>>>>>> parent of 2c4ce58... test button 2
