@@ -95,6 +95,7 @@ function generujTab(sposóbSort) {
     }
     tabela.innerHTML = html;
 }
+testjson()
 generujTab(rosnPoAlf("kraj"));
 
 //var testi = 0
@@ -104,4 +105,3 @@ generujTab(rosnPoAlf("kraj"));
 //	testi++;
 //}
 
-testjson()
