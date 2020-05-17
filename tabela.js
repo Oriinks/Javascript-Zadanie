@@ -15,7 +15,13 @@ class Państwo {
 		return P.gęstość() - L.gęstość();
 	}
 	dajWierszHTML() {
-		let html = "<tr>";
+		let html = "";
+		if (this.kraj == 'Średnia') {
+			html = "<tr id='wartosci'>"
+		} else {
+			html ="<tr>"
+        }
+			
 		for (let klucz in this) {
 			html += "<td>";
 			html += this[klucz];
