@@ -74,6 +74,8 @@ function testjson() {
 	sredniapop = sumapop / obj.length;
 	console.log(sredniapow);
 	console.log(sredniapop);
+	tabP.push(new Państwo("Suma powierzchni", "Suma Populacji", "Średnia powierzchni", "Średnia populacji"));
+	tabP.push(new Państwo(sumapow.toString(), sumapop.toString(), sredniapow.toString(), sredniapop.toString()));
 }
 
 
