@@ -58,7 +58,6 @@ function testjson() {
 	var sredniapow = 0;
 	var sumapop = 0;
 	var sredniapop = 0;
-	var j = 0;
 	var obj = JSON.parse(text);
 	//test.innerHTML = obj[1].kraj;
 	//test.innerHTML = obj.length;
@@ -67,13 +66,12 @@ function testjson() {
 		tabP.push(new Państwo(obj[i].kraj, obj[i].kontynent, obj[i].powierzchnia, obj[i].populacja));
 		sumapow += parseInt(obj[i].powierzchnia);
 		sumapop += parseInt(obj[i].populacja);
-		j++;
 	}
 	//test.innerHTML = tabP[0].kraj;
 	console.log(sumapow);
 	console.log(sumapop);
-	sredniapow = sumapow / j;
-	sredniapop = sumapop / j;
+	sredniapow = sumapow / obj.length;
+	sredniapop = sumapop / obj.length;
 	console.log(sredniapow);
 	console.log(sredniapop);
 }
