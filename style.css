@@ -86,3 +86,9 @@ table.steelBlueCols {
         position: relative;
         top: 1px;
     }
+#tytuly {
+    background-color: red;
+}
+#wartosci {
+    background-color: blue;
+}

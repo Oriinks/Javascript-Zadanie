@@ -87,8 +87,8 @@ function generujTab(sposóbSort) {
     for(let wiersz of tabP) {
         html += wiersz.dajWierszHTML();
 	}
-	html += "<tr><td>Suma</td><td>Wszystkie kontynenty</td><td>" + sumapow + "</td><td>" + sumapop + "</td><td>"+sumagestosc.toFixed(2)+"</td></tr>";
-	html += "<tr><td>Średnia</td><td>Wszystkie kontynenty</td><td>" + sredniapow.toFixed(2) + "</td><td>" + sredniapop.toFixed(2) + "</td><td>" + sredniagestosc.toFixed(2) +"</td></tr>";
+	html += "<tr id='tytuly'><td>Suma</td><td>Wszystkie kontynenty</td><td>" + sumapow + "</td><td>" + sumapop + "</td><td>"+sumagestosc.toFixed(2)+"</td></tr>";
+	html += "<tr id='wartosci'><td>Średnia</td><td>Wszystkie kontynenty</td><td>" + sredniapow.toFixed(2) + "</td><td>" + sredniapop.toFixed(2) + "</td><td>" + sredniagestosc.toFixed(2) +"</td></tr>";
 
     tabela.innerHTML = html;
 }
